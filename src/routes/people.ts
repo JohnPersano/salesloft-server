@@ -2,7 +2,6 @@ import express, { Request, Response } from "express";
 
 import { logger } from "../logger";
 import salesloft from "../clients/salesloft";
-import axios from "axios";
 
 
 const router = express.Router()
@@ -14,7 +13,7 @@ router.get('/', async (request: Request, response: Response) => {
 
     try {
 
-        const { data: responseData } = await axios.get("https://api.salesloft.com/v2/people.json");
+        const { data: responseData } = await salesloft.get("https://api.salesloft.com/v2/people.json");
 
         const people = responseData.data;
 
