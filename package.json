@@ -1,0 +1,19 @@
+{
+    "name": "salesloft-server",
+    "version": "1.0.0",
+    "description": "Server for the SalesLoft code challenge",
+    "main": "./dist/index.js",
+    "scripts": {
+        "start": "tsc && node ./dist/index.js"
+    },
+    "author": "John P.",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.21.1",
+        "express": "^4.17.1",
+        "winston": "^3.3.3"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.13"
+    }
+}

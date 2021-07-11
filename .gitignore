@@ -1,0 +1,14 @@
+# Webstorm
+.idea
+
+# NPM
+node_modules
+
+# Compiled code
+dist
+
+# Logs
+*.log
+
+# Environment variables
+*.env
