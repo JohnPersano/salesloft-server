@@ -1,7 +1,9 @@
 name: Cypress tests
 on: [push]
 jobs:
-  cypress-run:
+  mocha-run:
+    env:
+      SALESLOFT_API_KEY: "${{ secrets.SALESLOFT_API_KEY }}"
     runs-on: ubuntu-16.04
     steps:
       - name: Checkout
