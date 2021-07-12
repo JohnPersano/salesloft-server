@@ -1,5 +1,9 @@
-name: Cypress tests
+name: Mocha tests
 on: [push]
+
+env:
+  SALESLOFT_API_KEY: "${{ secrets.SALESLOFT_API_KEY }}"
+
 jobs:
   mocha-run:
     runs-on: ubuntu-16.04
@@ -11,7 +15,5 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Run Mocha tests
-        env:
-          SALESLOFT_API_KEY: "${{ secrets.SALESLOFT_API_KEY }}"
         run: yarn run test
 
