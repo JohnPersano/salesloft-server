@@ -17,3 +17,5 @@ app.get("/*", (request: Request, response: Response) => response.sendStatus(404)
 
 const port = process.env.PORT ?? 5000;
 app.listen(port, () => logger.info(`Server is running on port ${ port }`));
+
+export default app;
